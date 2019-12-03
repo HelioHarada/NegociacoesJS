@@ -4,7 +4,7 @@ class Negociacao {
         this._date = new Date(data.getTime());
         this._quantidade = quantidade;
         this._valor = valor;
-        
+        // deixar this imutavel
         Object.freeze(this)
     }
 
@@ -21,6 +21,8 @@ class Negociacao {
     }
 
     get volume(){
-        return this._valor * this._quantidade;
+        console.log(this._valor.value)
+        console.log(this._quantidade.value)
+        return this._valor.value * this._quantidade.value;
     }
 }
